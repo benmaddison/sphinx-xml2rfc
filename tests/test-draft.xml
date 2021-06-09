@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='utf-8'?>
+
+<!DOCTYPE rfc SYSTEM "rfc2629-xhtml.ent">
+
+<rfc xmlns:xi="http://www.w3.org/2001/XInclude"
+     category="std"
+     docName="draft-00"
+     ipr="trust200902"
+     xml:lang="en"
+     version="3">
+
+  <front>
+
+    <title abbrev="Test Draft">
+      Test Draft version: {version_path}
+    </title>
+
+    <seriesInfo name="Internet-Draft" value="draft-00"/>
+
+    <author fullname="Ben Maddison" initials="B." surname="Maddison">
+      <organization abbrev="Workonline">Workonline Communications</organization>
+      <address>
+        <postal>
+          <street/>
+          <city>Cape Town</city>
+          <code/>
+          <country>South Africa</country>
+        </postal>
+        <email>benm@workonline.africa</email>
+      </address>
+    </author>
+
+    <abstract>
+      <t>This is a minimal test draft</t>
+    </abstract>
+
+  </front>
+
+  <middle>
+
+    <section anchor="intro">
+      <name>Introduction</name>
+      <t>This is a minimal test draft</t>
+    </section>
+
+    <section anchor="security">
+      <name>Security Considerations</name>
+      <t>None</t>
+    </section>
+
+    <section anchor="iana">
+      <name>IANA Considerations</name>
+      <t>None</t>
+    </section>
+
+  </middle>
+
+  <back>
+  </back>
+
+</rfc>

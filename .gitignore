@@ -1,0 +1,18 @@
+# editor artiacts
+*.swp
+
+# build outputs
+*.egg-info/
+build/
+dist/
+
+# execution artifacts
+.venv/
+__pycache__
+
+# test artifacts
+.tox/
+.coverage
+coverage.xml
+.pytest_cache/
+.mypy_cache/
