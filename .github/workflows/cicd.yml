@@ -186,7 +186,7 @@ jobs:
           name: docs
           path: build/docs/html/
       - name: deploy to github-pages
-        uses: JamesIves/github-pages-deploy-action@4.1.1
+        uses: JamesIves/github-pages-deploy-action@4.1.4
         with:
           branch: gh-pages
           folder: build/docs/html
