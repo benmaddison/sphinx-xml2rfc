@@ -159,7 +159,8 @@ class Autogen(object):
         """Generate markdown sources for building by sphinx."""
         if not self.versions:
             return
-        with open(os.path.join(self.base_dir, "toc.md"), "w") as toc_fd:
+        with open(os.path.join(self.base_dir, "toc.md"), "w",
+                  encoding="utf-8") as toc_fd:
             toc_fd.write("# Internet Drafts\n\n"
                          ":::{toctree}\n"
                          ":maxdepth: 3\n\n")
@@ -167,14 +168,14 @@ class Autogen(object):
                 draft_toc = f"toc-{draft}"
                 toc_fd.write(f"{draft_toc}\n")
                 with open(os.path.join(self.base_dir, f"{draft_toc}.md"),
-                          "w") as draft_toc_fd:
+                          "w", encoding="utf-8") as draft_toc_fd:
                     draft_toc_fd.write(f"# `{draft}`\n\n"
                                        f":::{{toctree}}\n\n")
                     for ref_type, versions in ref_types.items():
                         ref_type_toc = f"{draft_toc}-{ref_type}"
                         draft_toc_fd.write(f"{ref_type_toc}\n")
                         with open(os.path.join(self.base_dir, f"{ref_type_toc}.md"),  # noqa: E501
-                                  "w") as ref_type_toc_fd:
+                                  "w", encoding="utf-8") as ref_type_toc_fd:
                             ref_type_toc_fd.write(f"# {ref_type}\n\n"
                                                   f":::{{toctree}}\n\n")
                             for version in versions:
@@ -184,7 +185,7 @@ class Autogen(object):
                                 )
                                 ref_type_toc_fd.write(f"{draft_doc}\n")
                                 with open(os.path.join(self.base_dir, f"{draft_doc}.md"),  # noqa: E501
-                                          "w") as draft_fd:
+                                          "w", encoding="utf-8") as draft_fd:
                                     draft_fd.write(f"# {version.ref_type}: {version.ref_name}\n\n"  # noqa: E501
                                                    f":::{{xml2rfc:version}} {draft}\n"  # noqa: E501
                                                    f":ref_type: {version.ref_type}\n"  # noqa: E501
@@ -195,7 +196,7 @@ class Autogen(object):
                     changes_toc = f"{draft_toc}-diffs"
                     draft_toc_fd.write(f"{changes_toc}\n")
                     with open(os.path.join(self.base_dir, f"{changes_toc}.md"),
-                              "w") as changes_toc_fd:
+                              "w", encoding="utf-8") as changes_toc_fd:
                         changes_toc_fd.write("# changes\n\n"
                                              ":::{toctree}\n\n")
                         for to_ver in self.sorted_versions(draft):
@@ -207,7 +208,7 @@ class Autogen(object):
                                 )
                                 changes_toc_fd.write(f"{changes_doc}\n")
                                 with open(os.path.join(self.base_dir, f"{changes_doc}.md"),  # noqa: E501
-                                          "w") as changes_doc_fd:
+                                          "w", encoding="utf-8") as changes_doc_fd:  # noqa: E501
                                     changes_doc_fd.write(f"# {from_ver.ref.path} ⟼ {to_ver.ref.path}\n\n"  # noqa: E501
                                                          f":::{{xml2rfc:diff}} {draft}\n"  # noqa: E501
                                                          f":from: {from_ver.ref.path}\n"  # noqa: E501
