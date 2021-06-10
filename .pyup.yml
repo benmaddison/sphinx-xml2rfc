@@ -1,8 +1,0 @@
-update: all
-pin: true
-assignees:
-  - benmaddison
-requirements:
-  - setup.cfg:
-      update: insecure
-      pin: false
