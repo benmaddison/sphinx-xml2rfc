@@ -3,6 +3,10 @@
 A `sphinx` extension providing features to document work-in-progress
 Internet-Drafts using `git` history.
 
+[![CI/CD](https://github.com/benmaddison/sphinx-xml2rfc/actions/workflows/cicd.yml/badge.svg)](https://github.com/benmaddison/sphinx-xml2rfc/actions/workflows/cicd.yml)
+[![codecov](https://codecov.io/gh/benmaddison/sphinx-xml2rfc/branch/main/graph/badge.svg?token=YclUBHw70S)](https://codecov.io/gh/benmaddison/sphinx-xml2rfc)
+[![Updates](https://pyup.io/repos/github/benmaddison/sphinx-xml2rfc/shield.svg)](https://pyup.io/repos/github/benmaddison/sphinx-xml2rfc/)
+
 ## Overview
 
 The extension contains two primary components:
