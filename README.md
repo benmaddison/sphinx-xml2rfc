@@ -6,7 +6,6 @@ Internet-Drafts using `git` history.
 ![PyPI](https://img.shields.io/pypi/v/sphinx-xml2rfc)
 [![CI/CD](https://github.com/benmaddison/sphinx-xml2rfc/actions/workflows/cicd.yml/badge.svg)](https://github.com/benmaddison/sphinx-xml2rfc/actions/workflows/cicd.yml)
 [![codecov](https://codecov.io/gh/benmaddison/sphinx-xml2rfc/branch/master/graph/badge.svg?token=YclUBHw70S)](https://codecov.io/gh/benmaddison/sphinx-xml2rfc)
-[![Updates](https://pyup.io/repos/github/benmaddison/sphinx-xml2rfc/shield.svg)](https://pyup.io/repos/github/benmaddison/sphinx-xml2rfc/)
 
 ## Overview
 
