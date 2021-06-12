@@ -18,7 +18,7 @@ import itertools
 import os
 import typing
 
-import docutils
+import docutils.parsers.rst.directives
 
 import sphinx
 
@@ -31,13 +31,15 @@ if typing.TYPE_CHECKING:
 
 logger = sphinx.util.logging.getLogger(__name__)
 
+OptionSpec = typing.Dict[str, typing.Callable[[str], typing.Any]]
+
 
 class VersionDirective(sphinx.directives.ObjectDescription[str]):
     """RST xml2rfc:version directive."""
 
     has_content = False
     required_arguments = 1
-    option_spec = {
+    option_spec: OptionSpec = {  # type: ignore[assignment]
         "ref_type": docutils.parsers.rst.directives.unchanged_required,
         "ref_name": docutils.parsers.rst.directives.unchanged_required,
         "ref_path": docutils.parsers.rst.directives.unchanged_required,
@@ -47,9 +49,9 @@ class VersionDirective(sphinx.directives.ObjectDescription[str]):
         """Save the version object for later processing."""
         self.version = Version(base_dir=get_base_dir(self.env.app),
                                draft=self.arguments[0].strip(),
-                               ref_type=self.options.get("ref_type").strip(),
-                               ref_name=self.options.get("ref_name").strip(),
-                               ref_path=self.options.get("ref_path").strip())
+                               ref_type=self.options["ref_type"].strip(),
+                               ref_name=self.options["ref_name"].strip(),
+                               ref_path=self.options["ref_path"].strip())
         return super().run()
 
     def handle_signature(self, sig: str,
@@ -110,7 +112,7 @@ class DiffDirective(sphinx.directives.ObjectDescription[str]):
 
     has_content = False
     required_arguments = 1
-    option_spec = {
+    option_spec: OptionSpec = {  # type: ignore[assignment]
         "from": docutils.parsers.rst.directives.unchanged_required,
         "to": docutils.parsers.rst.directives.unchanged_required,
     }
@@ -118,8 +120,8 @@ class DiffDirective(sphinx.directives.ObjectDescription[str]):
     def run(self) -> typing.List[docutils.nodes.Node]:
         """Save the version object for later processing."""
         self.diff = Diff(draft=self.arguments[0].strip(),
-                         ref_from=self.options.get("from").strip(),
-                         ref_to=self.options.get("to").strip())
+                         ref_from=self.options["from"].strip(),
+                         ref_to=self.options["to"].strip())
         return super().run()
 
     def handle_signature(self, sig: str,
@@ -231,7 +233,7 @@ class Xml2rfcDomain(sphinx.domains.Domain):
                 return version
         raise VersionNotFound(ref_path)
 
-    def resolve_xref(self, env: sphinx.environment.BuildEnvironment,
+    def resolve_xref(self, env: sphinx.environment.BuildEnvironment,  # type: ignore[override]  # noqa: E501
                      fromdocname: str, builder: sphinx.builders.Builder,
                      typ: str, target: str, node: sphinx.addnodes.pending_xref,
                      contnode: docutils.nodes.Element) -> typing.Optional[docutils.nodes.Element]:  # noqa: E501

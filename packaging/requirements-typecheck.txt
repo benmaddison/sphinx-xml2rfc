@@ -1,1 +1,4 @@
-mypy==0.812
+mypy==0.902
+
+# type stubs
+docutils-stubs==0.0.20
