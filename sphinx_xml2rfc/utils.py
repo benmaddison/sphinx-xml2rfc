@@ -26,5 +26,4 @@ logger = sphinx.util.logging.getLogger(__name__)
 
 def get_base_dir(app: sphinx.application.Sphinx) -> str:
     """Get the absolute path to the base output directory."""
-    return os.path.join(typing.cast(str, app.confdir),
-                        app.config.xml2rfc_output)
+    return os.path.join(app.confdir, app.config.xml2rfc_output)

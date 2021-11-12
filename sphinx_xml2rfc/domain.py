@@ -39,7 +39,7 @@ class VersionDirective(sphinx.directives.ObjectDescription[str]):
 
     has_content = False
     required_arguments = 1
-    option_spec: OptionSpec = {  # type: ignore[assignment]
+    option_spec: OptionSpec = {
         "ref_type": docutils.parsers.rst.directives.unchanged_required,
         "ref_name": docutils.parsers.rst.directives.unchanged_required,
         "ref_path": docutils.parsers.rst.directives.unchanged_required,
@@ -112,7 +112,7 @@ class DiffDirective(sphinx.directives.ObjectDescription[str]):
 
     has_content = False
     required_arguments = 1
-    option_spec: OptionSpec = {  # type: ignore[assignment]
+    option_spec: OptionSpec = {
         "from": docutils.parsers.rst.directives.unchanged_required,
         "to": docutils.parsers.rst.directives.unchanged_required,
     }
@@ -233,7 +233,7 @@ class Xml2rfcDomain(sphinx.domains.Domain):
                 return version
         raise VersionNotFound(ref_path)
 
-    def resolve_xref(self, env: sphinx.environment.BuildEnvironment,  # type: ignore[override]  # noqa: E501
+    def resolve_xref(self, env: sphinx.environment.BuildEnvironment,
                      fromdocname: str, builder: sphinx.builders.Builder,
                      typ: str, target: str, node: sphinx.addnodes.pending_xref,
                      contnode: docutils.nodes.Element) -> typing.Optional[docutils.nodes.Element]:  # noqa: E501

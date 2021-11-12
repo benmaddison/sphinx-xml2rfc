@@ -49,7 +49,7 @@ def autogen_select_refs(app: sphinx.application.Sphinx) -> Refs:
     """Select git refs to include."""
     branch_re = re.compile(app.config.xml2rfc_autogen_branch_re)
     tag_re = re.compile(app.config.xml2rfc_autogen_tag_re)
-    repo = git.Repo(path=os.path.dirname(__file__),
+    repo = git.Repo(path=os.path.dirname(__file__),  # type: ignore[attr-defined] # noqa: E501
                     search_parent_directories=True)
     refs = {"branches": {b.name: b for b in repo.branches
                          if branch_re.match(b.name)},
