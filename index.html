@@ -4,11 +4,12 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Welcome to sphinx-xml2rfc’s documentation &#8212; sphinx-xml2rfc 0.1.1.dev12 documentation</title>
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="_static/readable.css" type="text/css" />
-    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Welcome to sphinx-xml2rfc’s documentation &#8212; sphinx-xml2rfc 0.1.1.dev42 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/readable.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
@@ -29,7 +30,7 @@
         <li class="right" style="margin-right: 10px">
           <a href="genindex.html" title="General Index"
              accesskey="I">index</a></li>
-        <li class="nav-item nav-item-0"><a href="#">sphinx-xml2rfc 0.1.1.dev12 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="#">sphinx-xml2rfc 0.1.1.dev42 documentation</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">Welcome to sphinx-xml2rfc’s documentation</a></li> 
       </ul>
     </div>  
@@ -39,10 +40,10 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="welcome-to-sphinx-xml2rfc-s-documentation">
+  <section class="tex2jax_ignore mathjax_ignore" id="welcome-to-sphinx-xml2rfc-s-documentation">
 <h1>Welcome to sphinx-xml2rfc’s documentation<a class="headerlink" href="#welcome-to-sphinx-xml2rfc-s-documentation" title="Permalink to this headline">¶</a></h1>
-</div>
-<div class="section" id="sphinx-xml2rfc">
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="sphinx-xml2rfc">
 <h1>sphinx-xml2rfc<a class="headerlink" href="#sphinx-xml2rfc" title="Permalink to this headline">¶</a></h1>
 <p>A <code class="docutils literal notranslate"><span class="pre">sphinx</span></code> extension providing features to document work-in-progress
 Internet-Drafts using <code class="docutils literal notranslate"><span class="pre">git</span></code> history.</p>
@@ -50,31 +51,31 @@ Internet-Drafts using <code class="docutils literal notranslate"><span class="pr
 <a class="reference external" href="https://github.com/benmaddison/sphinx-xml2rfc/actions/workflows/cicd.yml"><img alt="CI/CD" src="https://github.com/benmaddison/sphinx-xml2rfc/actions/workflows/cicd.yml/badge.svg" /></a>
 <a class="reference external" href="https://codecov.io/gh/benmaddison/sphinx-xml2rfc"><img alt="codecov" src="https://codecov.io/gh/benmaddison/sphinx-xml2rfc/branch/master/graph/badge.svg?token=YclUBHw70S" /></a>
 <a class="reference external" href="https://pyup.io/repos/github/benmaddison/sphinx-xml2rfc/"><img alt="Updates" src="https://pyup.io/repos/github/benmaddison/sphinx-xml2rfc/shield.svg" /></a></p>
-<div class="section" id="overview">
+<section id="overview">
 <h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
 <p>The extension contains two primary components:</p>
-<div class="section" id="versioned-document-generation">
+<section id="versioned-document-generation">
 <h3>Versioned document generation<a class="headerlink" href="#versioned-document-generation" title="Permalink to this headline">¶</a></h3>
 <p>Hooks <code class="docutils literal notranslate"><span class="pre">sphinx-build</span></code> initialisation, and searches the local <code class="docutils literal notranslate"><span class="pre">git</span></code> repository
 for <code class="docutils literal notranslate"><span class="pre">refs</span></code>, and uses <code class="docutils literal notranslate"><span class="pre">xml2rfc</span></code> to build each version of the named drafts.</p>
 <p>These are written to the <code class="docutils literal notranslate"><span class="pre">sphinx</span></code> source directory tree for use during the
 build phase.</p>
-</div>
-<div class="section" id="sphinx-language-domain">
+</section>
+<section id="sphinx-language-domain">
 <h3><code class="docutils literal notranslate"><span class="pre">sphinx</span></code> language domain<a class="headerlink" href="#sphinx-language-domain" title="Permalink to this headline">¶</a></h3>
 <p>The <code class="docutils literal notranslate"><span class="pre">xml2rfc</span></code> domain provides directives for rendering Internet-Draft texts
 and for displaying changes between versions.</p>
 <p>Documentation sources containing the appropriate directives can optionally be
 auto-generated, after the fashion of <code class="docutils literal notranslate"><span class="pre">sphinx-apidoc</span></code></p>
-</div>
-</div>
-<div class="section" id="installation">
+</section>
+</section>
+<section id="installation">
 <h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>python -m pip install sphinx-xml2rfc
 </pre></div>
 </div>
-</div>
-<div class="section" id="usage">
+</section>
+<section id="usage">
 <h2>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h2>
 <p>To use, add <code class="docutils literal notranslate"><span class="pre">sphinx_xml2rfc</span></code> to <code class="docutils literal notranslate"><span class="pre">extensions</span></code> in <code class="docutils literal notranslate"><span class="pre">conf.py</span></code>:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">extensions</span> <span class="o">=</span> <span class="p">[</span>
@@ -123,8 +124,8 @@ for.</p>
 <p>default: <code class="docutils literal notranslate"><span class="pre">&quot;_xml2rfc&quot;</span></code></p>
 </li>
 </ul>
-</div>
-</div>
+</section>
+</section>
 
 
             <div class="clearer"></div>
@@ -163,7 +164,7 @@ for.</p>
   <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
       <input type="submit" value="Go" />
     </form>
     </div>
@@ -175,7 +176,7 @@ for.</p>
     </div>
   <div class="footer">
     &copy; Copyright 2021, Ben Maddison.
-    Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.5.4.
+    Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.3.0.
   </div>
   
   </div>
