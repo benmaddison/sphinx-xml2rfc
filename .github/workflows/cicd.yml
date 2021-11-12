@@ -3,7 +3,7 @@ on:
   - push
   - pull_request
 env:
-  DEFAULT_PYTHON: 3.9
+  DEFAULT_PYTHON: "3.9"
 jobs:
   safety:
     runs-on: ubuntu-latest
@@ -46,9 +46,9 @@ jobs:
           - windows-latest
           - macos-latest
         python-version:
-          - 3.8
-          - 3.9
-          - 3.10
+          - "3.8"
+          - "3.9"
+          - "3.10"
     env:
       TOX_JOB: typecheck
     runs-on: ${{ matrix.os }}
@@ -73,9 +73,9 @@ jobs:
           - windows-latest
           - macos-latest
         python-version:
-          - 3.8
-          - 3.9
-          - 3.10
+          - "3.8"
+          - "3.9"
+          - "3.10"
     env:
       TOX_JOB: test
     runs-on: ${{ matrix.os }}
@@ -105,9 +105,9 @@ jobs:
           - windows-latest
           - macos-latest
         python-version:
-          - 3.8
-          - 3.9
-          - 3.10
+          - "3.8"
+          - "3.9"
+          - "3.10"
     steps:
       - name: checkout
         uses: actions/checkout@v2
