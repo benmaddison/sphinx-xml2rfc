@@ -1,4 +1,4 @@
-mypy==0.910
+mypy==0.930
 
 # type stubs
 docutils-stubs==0.0.21
