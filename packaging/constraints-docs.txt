@@ -1,1 +1,2 @@
 docutils<0.18
+Jinja2<3.0
