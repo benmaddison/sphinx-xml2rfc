@@ -1,7 +1,7 @@
 sphinx==5.1.1
 
 # sphinx extensions
-myst-parser==0.18.0
+myst-parser==0.18.1
 
 # sphinx theme
 sphinx-readable-theme==1.3.0
